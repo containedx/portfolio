@@ -3,3 +3,8 @@ html body {
   margin: 0;
   padding: 0;
 }
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  cursor: url('/src/assets/cursor/cat_pixel_cursor.png'), auto;
+}
