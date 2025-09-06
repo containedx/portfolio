@@ -4,9 +4,9 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const TOTAL_FRAMES = 182;
+const TOTAL_FRAMES = 192;
 const START_FRAME = 86400;
-const END_FRAME = 86581;
+const END_FRAME = START_FRAME + TOTAL_FRAMES;
 
 const IntroCanvasSequence : React.FC = () =>
 {

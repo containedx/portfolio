@@ -1,6 +1,7 @@
 
 import IntroCanvasSequence from "./components/IntroCanvasSequence";
 import AboutMe from "./components/AboutMe";
+import Career from "./components/Career";
 
 
 const App: React.FC = () => {
@@ -20,10 +21,10 @@ const App: React.FC = () => {
 
         
 
-        <main style={{ height: "5000px", width: "100vw" }}>
+        <main style={{ height: "10000px", width: "100vw" }}>
 
           <AboutMe/>
-
+          <Career/>
           
         </main>
 

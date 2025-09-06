@@ -51,7 +51,7 @@ const AboutMe : React.FC = () => {
 
       {/* Left: Captions */}
       <div style={{ flex: 1,  maxWidth: "40vw", fontSize: "30px" }}>
-        <h2> <Typewriter text="Hi!" speed={100} /> </h2> 
+        <h2> <Typewriter text="Hi! ✨" speed={100} /> </h2> 
         <Typewriter text={ABOUT_ME_TEXT} speed={100}  />
       </div>
 
@@ -119,7 +119,7 @@ const AboutMe : React.FC = () => {
 
         <div style={{ position: "relative", display: "inline-block"}}> {/*Right Side - aura and text */}
             <motion.div
-                animate={{ opacity: [0, 1, 0] }} // pulse from transparent → visible → transparent
+                animate={{ opacity: [0.2, 0.8, 0.2] }} // pulse from transparent → visible → transparent
                 transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
                 
             >
