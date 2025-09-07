@@ -44,7 +44,7 @@ const AboutMe : React.FC = () => {
     <img
       src={background_blue_aura}
       style={{
-        width: "100vw"
+        width: "100%"
       }}
     />
   </motion.div>
