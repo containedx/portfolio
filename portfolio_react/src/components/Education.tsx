@@ -22,14 +22,14 @@ const Education: React.FC = () => {
   });
 
   const stages = [
-  { title: "Scrum", img: scrum, description: ""},
+  { title: "Scrum", img: scrum, description: "description"},
 //  { title: "Agile PM Foundation", img: certificate, description: ""},
-  { title: "Ai Algorithms for Gaming", img: ai_gaming, description: "" },
-  { title: "Unreal",  img: unreal, description: ""},
-  { title: "English C2", img: english, description: ""},
-  { title: "Ai Unity", img: ai_unity, description: ""},
-  { title: "UI UX", img: ui_ux, description: ""},
-  { title: "AI in Business Development", img: ai_business, description: ""},
+  { title: "Ai Algorithms for Gaming", img: ai_gaming, description: "description" },
+  { title: "Unreal",  img: unreal, description: "description"},
+  { title: "English C2", img: english, description: "description"},
+  { title: "Ai Unity", img: ai_unity, description: "description"},
+  { title: "UI UX", img: ui_ux, description: "description"},
+  { title: "AI in Business Development", img: ai_business, description: "description"},
 ];
 
   // przesuwamy tylko tło
@@ -84,36 +84,29 @@ const Education: React.FC = () => {
 
         
 
-            <motion.div
+            <motion.img
+                src={university}
+                alt="university"
                 style={{
                     position: "absolute",
                     top: "15vh",
                     height: "80vh",
                     width: "40vh",
-                    marginLeft: "3vh",
-                    backgroundImage: `url(${university})`,
-                    backgroundSize: "contain",
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "flex-start",
-                    fontWeight: "bold",
+                    marginLeft: "10vh",
+                    objectFit: "contain",
                 }}
-                
                 initial={{ scale: 0, y: 50, opacity: 0 }}
                 whileInView={{ scale: 1, y: 0, opacity: 1 }}
                 transition={{ type: "spring", stiffness: 120, damping: 12 }}
                 viewport={{ once: false, amount: 0.2 }}
-                >
-                <h1 style={{paddingTop: "15%", fontSize: "2vh"}}>  </h1>
-            </motion.div>
+            />
+
 
         <div 
         style={{
             position: "absolute",
             top: "15vh",
-            left: "40vh",          
+            left: "25vw",          
             zIndex: 10
           }}>
 
@@ -134,20 +127,70 @@ const Education: React.FC = () => {
                     {stages.slice(0, activeStage).map((stage, i) => {
                         const isLast = i === activeStage - 1;
                         return (
-                            <motion.img
-                            key={i}
-                            src={stage.img}
-                            alt={stage.title}
-                            style={{
-                                height: "30vh",
-                                width: "40vh",
-                                margin: "1vh",
-                                objectFit: "contain", // zamiast background-size
-                            }}
-                            initial={isLast ? { scale: 0, y: 50, opacity: 0 } : false}
-                            animate={isLast ? { scale: 1, y: 0, opacity: 1 } : false}
-                            transition={{ type: "spring", stiffness: 120, damping: 12 }}
-                            />
+                            <motion.div
+                                key={i}
+                                style={{
+                                    height: "30vh",
+                                    width: "18vw",
+                                    margin: "1vh",
+                                    perspective: "1000px", // potrzebne dla 3D
+                                }}
+                                initial={isLast ? { scale: 0, y: 50, opacity: 0 } : false}
+                                animate={isLast ? { scale: 1, y: 0, opacity: 1 } : false}
+                                transition={{ type: "spring", stiffness: 120, damping: 12 }}
+                                className="flip-card"
+                                >
+                                <div className="flip-card-inner">
+                                    {/* FRONT */}
+                                    <div className="flip-card-front">
+                                    <img
+                                        src={stage.img}
+                                        alt={stage.title}
+                                        style={{ width: "100%", height: "100%", objectFit: "contain" }}
+                                    />
+                                    </div>
+
+                                    {/* BACK */}
+                                    <div className="flip-card-back">
+                                    {stage.description || "No description"}
+                                    </div>
+                                </div>
+
+                                <style>
+                                    {`
+                                    .flip-card-inner {
+                                        width: 100%;
+                                        height: 100%;
+                                        transition: transform 0.8s;
+                                        transform-style: preserve-3d;
+                                        position: relative;
+                                    }
+
+                                    .flip-card:hover .flip-card-inner {
+                                        transform: rotateY(180deg);
+                                    }
+
+                                    .flip-card-front,
+                                    .flip-card-back {
+                                        position: absolute;
+                                        inset: 0; 
+                                        backface-visibility: hidden;
+                                    }
+
+                                    .flip-card-back {
+                                        background: #fff;
+                                        color: #000;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        padding: 0.5rem;
+                                        transform: rotateY(180deg);
+                                        box-sizing: border-box;
+                                    }
+                                    `}
+                                </style>
+                                </motion.div>
+
                         );
                     })}
 
