@@ -2,6 +2,7 @@
 import IntroCanvasSequence from "./components/IntroCanvasSequence";
 import AboutMe from "./components/AboutMe";
 import Career from "./components/Career";
+import Education from "./components/Education";
 
 
 const App: React.FC = () => {
@@ -25,6 +26,7 @@ const App: React.FC = () => {
 
           <AboutMe/>
           <Career/>
+          <Education/>
           
         </main>
 
