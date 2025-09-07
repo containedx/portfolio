@@ -26,10 +26,10 @@ const Education: React.FC = () => {
 //  { title: "Agile PM Foundation", img: certificate, description: ""},
   { title: "Ai Algorithms for Gaming", img: ai_gaming, description: "description" },
   { title: "Unreal",  img: unreal, description: "description"},
-  { title: "English C2", img: english, description: "description"},
   { title: "Ai Unity", img: ai_unity, description: "description"},
   { title: "UI UX", img: ui_ux, description: "description"},
   { title: "AI in Business Development", img: ai_business, description: "description"},
+  { title: "English C2", img: english, description: "description"},
 ];
 
   // przesuwamy tylko tło
@@ -78,7 +78,7 @@ const Education: React.FC = () => {
             letterSpacing: "2px",
             }}
           > 
-              <Typewriter text="MY EDUCATION" speed={100} />
+              <Typewriter text="MY EDUCATION 🎓" speed={100} />
           </h1>
         </div>
 

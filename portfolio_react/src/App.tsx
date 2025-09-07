@@ -3,6 +3,7 @@ import IntroCanvasSequence from "./components/IntroCanvasSequence";
 import AboutMe from "./components/AboutMe";
 import Career from "./components/Career";
 import Education from "./components/Education";
+import Projects from "./components/Projects";
 
 
 const App: React.FC = () => {
@@ -22,11 +23,12 @@ const App: React.FC = () => {
 
         
 
-        <main style={{ height: "10000px", width: "100vw" }}>
+        <main style={{ height: "20000px", width: "100vw" }}>
 
           <AboutMe/>
           <Career/>
           <Education/>
+          <Projects/>
           
         </main>
 
