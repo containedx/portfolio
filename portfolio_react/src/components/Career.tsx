@@ -83,24 +83,24 @@ const Career: React.FC = () => {
           <div style={{ display: "flex", gap: "4px" }}>
             {/* <h2>active stage {activeStage} </h2> */}
             <div style={{ display: "flex", gap: "4px" }}>
-          {[...Array(activeStage + 1)].map((_, i) => {
-            const isLast = i === activeStage; // ten świeży kwiatek 🌱
-              return (
+              {[...Array(stages.length)].map((_, i) => {
+                const isVisible = i <= activeStage;
+                //const isLast = i === activeStage;
+
+                return (
                   <motion.img
                     key={i}
                     src={flower}
                     alt="flower"
                     style={{ height: "20vh" }}
-                    initial={isLast ? { scale: 0, y: 50, opacity: 0 } : false}
-                    animate={isLast ? { scale: 1, y: 0, opacity: 1 } : false}
+                    initial={{ scale: 0, y: 50, opacity: 0 }}
+                    animate={isVisible ? { scale: 1, y: 0, opacity: 1 } : { scale: 0, y: 50, opacity: 0 }}
                     transition={{ type: "spring", stiffness: 120, damping: 12 }}
                   />
-              );
-          })}
-</div>
-
+                );
+              })}
+            </div>
           </div>
-
         </div>
 
         {/* career stages */}
