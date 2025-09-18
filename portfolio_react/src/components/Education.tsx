@@ -74,7 +74,7 @@ const Education: React.FC = () => {
               letterSpacing: "2px",
             }}
           >
-            <Typewriter text="MY EDUCATION 🎓" speed={100} />
+            <Typewriter text="MY EDUCATION 🎓"  />
           </h1>
         </div>
 

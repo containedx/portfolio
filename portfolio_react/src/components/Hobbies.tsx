@@ -72,7 +72,7 @@ const Hobbies: React.FC = () => {
             marginBottom: "2vh",
           }}
         >
-          <Typewriter text="MY HOBBIES" speed={100} />
+          <Typewriter text="MY HOBBIES"  />
         </h1>
 
         {/* collector text  */}

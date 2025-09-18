@@ -66,7 +66,7 @@ const Career: React.FC = () => {
             letterSpacing: "2px",
             }}
           > 
-              <Typewriter text="MY CAREER GROWTH 🌼" speed={100} />
+              <Typewriter text="MY CAREER GROWTH 🌼"  />
           </h1>
         </div>
 

@@ -7,7 +7,7 @@ interface TypewriterProps {
   className?: string; // optional styling
 }
 
-const Typewriter: React.FC<TypewriterProps> = ({ text, speed = 50, className }) => {
+const Typewriter: React.FC<TypewriterProps> = ({ text, speed = 30, className }) => {
   const [displayedText, setDisplayedText] = useState("");
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true });

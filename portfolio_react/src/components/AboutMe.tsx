@@ -51,8 +51,8 @@ const AboutMe : React.FC = () => {
 
       {/* Left: Captions */}
       <div style={{ flex: 1,  maxWidth: "40vw", fontSize: "30px" }}>
-        <h2> <Typewriter text="Hi! ✨" speed={100} /> </h2> 
-        <Typewriter text={ABOUT_ME_TEXT} speed={100}  />
+        <h2> <Typewriter text="Hi! ✨"  /> </h2> 
+        <Typewriter text={ABOUT_ME_TEXT}   />
       </div>
 
       {/* Right: Image */}
@@ -142,7 +142,7 @@ const AboutMe : React.FC = () => {
                 fontWeight: "bold"
                 }}
             >
-            <Typewriter text={I_LOVE_TEXT} speed={100}  />
+            <Typewriter text={I_LOVE_TEXT}  />
             </div>
         </div>
         
