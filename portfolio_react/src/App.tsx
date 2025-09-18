@@ -4,6 +4,7 @@ import AboutMe from "./components/AboutMe";
 import Career from "./components/Career";
 import Education from "./components/Education";
 import Projects from "./components/Projects";
+import Hobbies from "./components/Hobbies";
 
 
 const App: React.FC = () => {
@@ -29,6 +30,7 @@ const App: React.FC = () => {
           <Career/>
           <Education/>
           <Projects/>
+          <Hobbies/>
           
         </main>
 

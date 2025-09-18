@@ -10,7 +10,6 @@ const Projects: React.FC = () => {
 
 const stages = [
   { title: "Project X", years: "2017 - 2021", description: "University of Science", color: "#A79CC9" }, // fiolet podstawowy
-  { title: "Project Y", years: "2020", description: "JS, TS, PixiJS", color: "#9E91D1" }, // fiolet z domieszką niebieskiego
   { title: "Project Z", years: "2021", description: "C#, Unity", color: "#92A6DD" }, // delikatny niebiesko-fioletowy
   { title: "Project W", years: "2021-2023", description: "GDScript, Godot Engine", color: "#8AB8E0" }, // pastelowy błękit
   { title: "Project V", years: "2023-now", description: "C#, Unity Engine", color: "#B7C9E2" }, // jasny błękit z Twojej palety

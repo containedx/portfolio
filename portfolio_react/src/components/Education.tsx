@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import Typewriter from "./Typewriter";
 
 // images
-import certificate from "../assets/img/certificates/certificate.webp";
+//import certificate from "../assets/img/certificates/certificate.webp";
 import university from "../assets/img/university.webp";
 import ai_gaming from "../assets/img/certificates/ai_algorithms_for_gaming.png";
 import ai_business from "../assets/img/certificates/AI_business.png";
