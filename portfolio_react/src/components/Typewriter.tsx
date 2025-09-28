@@ -26,7 +26,7 @@ const Typewriter: React.FC<TypewriterProps> = ({ text, speed = 30, className }) 
   }, [inView, text, speed]);
 
   return (
-    <div ref={ref} className={className} style={{ whiteSpace: "pre-wrap", fontFamily: "monospace" }}>
+    <div ref={ref} className={className}>
       {displayedText}
     </div>
   );

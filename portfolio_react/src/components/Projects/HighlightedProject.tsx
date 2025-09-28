@@ -36,9 +36,41 @@ const HighlightedProject: React.FC<ProjectProps> = ( {project} ) => {
           minWidth: "280px",
         }}
       >
-        <h2 style={{ margin: "0 0 1rem 0" }}>{project.years}</h2>
-        <h2 style={{ margin: "0 0 1rem 0" }}>{project.topic}</h2>
-        <h1 style={{ margin: "0 0 1rem 0" }}>{project.title}</h1>
+
+        <h1 style={{ marginTop:"8vh", fontFamily: "'Montserrat', sans-serif", }}>{project.title}</h1>
+        <h2 style={{ marginTop: "4vh", marginBottom: "4vh" }}>{project.years}</h2>
+        
+        <div
+          style={{
+            display: "flex",
+            gap: "0.5rem",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            marginBottom: "1rem",
+          }}
+        >
+          {project.topic.map((t, i) => (
+            <span
+              key={i}
+              style={{
+                backgroundColor: "#971636ff", // fallback color
+                color: "#fff",
+                padding: "0.4rem 1rem",
+                borderRadius: "9999px", // makes it fully rounded
+                fontSize: "0.9rem",
+                fontWeight: 800,
+                display: "inline-block",
+                fontFamily: "'Montserrat', sans-serif",
+              }}
+            >
+              {t}
+            </span>
+          ))}
+        </div>
+
+
+
+        
         <p style={{ margin: "5vh" }}>{project.description}</p>
 
         <h2>
