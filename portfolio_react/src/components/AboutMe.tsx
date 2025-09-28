@@ -6,8 +6,8 @@ import background_blue_aura from "../assets/img/blue_background_aura.webp";
 
 import Typewriter from "./Typewriter";
 
-const ABOUT_ME_TEXT : string = "I'm Kinga 💻 I like programming 👾 words to describe me would be: 🌸 creative 🎨 organized 🗒️ curious 🌎 ambitious 🤖 analytical 🧠 persistent ⚡foodie 🍝 mermaid 🌊";
-const I_LOVE_TEXT : string = "I LOVE 🫶 cats 😸 games 🎮 art 🎨 travel 🌍 aerial sports 🤸‍♀️  reading 📚";
+const ABOUT_ME_TEXT : string = "I'm Kinga 💻 I like programming, being creative and self development 👾 ";
+const I_LOVE_TEXT : string = "words to describe me would be: 🌸 creative 🎨 organized 🗒️ curious 🌎 ambitious 🤖 analytical 🧠 persistent ⚡foodie 🍝 mermaid 🌊";
 
 const AboutMe : React.FC = () => {
 
@@ -50,7 +50,7 @@ const AboutMe : React.FC = () => {
   </motion.div>
 
       {/* Left: Captions */}
-      <div style={{ flex: 1,  maxWidth: "40vw", fontSize: "30px" }}>
+      <div style={{ flex: 1,  maxWidth: "40vw", fontSize: "3vw" }}>
         <h2> <Typewriter text="Hi! ✨"  /> </h2> 
         <Typewriter text={ABOUT_ME_TEXT}   />
       </div>
@@ -138,8 +138,7 @@ const AboutMe : React.FC = () => {
                 left: "50%",
                 transform: "translate(-50%, -50%)",
                 textAlign: "center",  
-                fontSize: "18px",  
-                fontWeight: "bold"
+                fontSize: "2vh"
                 }}
             >
             <Typewriter text={I_LOVE_TEXT}  />

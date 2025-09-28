@@ -6,6 +6,7 @@ import Education from "./components/Education";
 import Projects from "./components/Projects/Projects";
 import Hobbies from "./components/Hobbies";
 import Footnote from "./components/Footnote";
+import SmallProjects from "./components/Projects/SmallProjects";
 
 
 const App: React.FC = () => {
@@ -25,12 +26,13 @@ const App: React.FC = () => {
 
         
 
-        <main style={{ height: "20000px", width: "100vw" }}>
+        <main style={{ height: "17000px", width: "100vw" }}>
 
           <AboutMe/>
           <Career/>
           <Education/>
           <Projects/>
+          <SmallProjects/>
           <Hobbies/>
           <Footnote/>
           

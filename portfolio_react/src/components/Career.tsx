@@ -35,6 +35,7 @@ const Career: React.FC = () => {
     style={{
         position: "relative",
         height: "400vh",
+        marginTop: "20vh"
       }}
     >
       {/* sticky viewport */}

@@ -12,7 +12,7 @@ const Footnote : React.FC = () => {
                 justifyContent: "center",
                 textAlign: "center",
                 alignItems: "center",
-                marginTop: "20vh"
+                marginTop: "40vh"
             }}>
             <h2 style={{ width: "80vw", maxWidth: "300px" }}>
                 <Typewriter text={thankyounote} ></Typewriter>
