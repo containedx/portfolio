@@ -3,7 +3,7 @@ import IntroCanvasSequence from "./components/IntroCanvasSequence";
 import AboutMe from "./components/AboutMe";
 import Career from "./components/Career";
 import Education from "./components/Education";
-import Projects from "./components/Projects";
+import Projects from "./components/Projects/Projects";
 import Hobbies from "./components/Hobbies";
 import Footnote from "./components/Footnote";
 

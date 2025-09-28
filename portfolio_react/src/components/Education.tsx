@@ -28,13 +28,13 @@ const Education: React.FC = () => {
     { title: "Ai Unity", img: ai_unity, description: "description" },
     { title: "UI UX", img: ui_ux, description: "description" },
     { title: "AI in Business Development", img: ai_business, description: "description" },
-    { title: "English C2", img: english, description: "description" },
+    //{ title: "English C2", img: english, description: "description" },
   ];
 
   const [activeStage, setActiveStage] = useState(0);
 
   useMotionValueEvent(scrollYProgress, "change", (p) => {
-    const index = Math.round(p * (stages.length - 1));
+    const index = Math.floor(p * stages.length);
     setActiveStage(index - 1);
   });
 
