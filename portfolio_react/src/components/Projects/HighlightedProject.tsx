@@ -1,16 +1,5 @@
 
-interface ProjectProps {
-  project: {
-    title: string;
-    years: string;
-    topic: string;
-    description: string;
-    color?: string;
-    link: string;
-    picture1: string;
-    picture2: string;
-  };
-}
+import { type ProjectProps } from "./projectsData";
 
 const HighlightedProject: React.FC<ProjectProps> = ( {project} ) => {
 

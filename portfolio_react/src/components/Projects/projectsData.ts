@@ -35,6 +35,10 @@ export interface Project {
   picture2?: string;
 }
 
+export interface ProjectProps {
+  project: Project;
+}
+
 export interface SmallProject {
   title: string;
   topic: string[];

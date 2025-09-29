@@ -17,7 +17,7 @@ const IntroCanvasSequence : React.FC = () =>
     const frameImages: HTMLImageElement[] = [];
     for (let i = START_FRAME; i <= END_FRAME; i++) {
       const img = new Image();
-      img.src = `/background_intro/background000${i}.jpg`;
+      img.src =  `/portfolio/background_intro/background000${i}.jpg`;
       frameImages.push(img);
     }
     setImages(frameImages);

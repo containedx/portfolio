@@ -8,7 +8,7 @@ import university from "../assets/img/university.webp";
 import ai_gaming from "../assets/img/certificates/ai_algorithms_for_gaming.png";
 import ai_business from "../assets/img/certificates/AI_business.png";
 import ai_unity from "../assets/img/certificates//AI_unity.png";
-import english from "../assets/img/certificates/englishC2.webp";
+//import english from "../assets/img/certificates/englishC2.webp";
 import scrum from "../assets/img/certificates/ScrumMasterCertified-KingaZawarty.png";
 import ui_ux from "../assets/img/certificates/UI_UX.png";
 import unreal from "../assets/img/certificates/unreal_essential.png";
