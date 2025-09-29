@@ -1,7 +1,7 @@
 import Typewriter from "./Typewriter";
 
 const thankyounote : string = 
-"Thank you for making it this far into my website ✨ Made with extra effort and care, hopefully turning into fun, refreshing, interactive website portfolio experience";
+"The End ✨ hope you enjoyed! ";
 
 
 const Footnote : React.FC = () => {
