@@ -26,7 +26,7 @@ const App: React.FC = () => {
 
         
 
-        <main style={{ height: "17000px", width: "100vw" }}>
+        <main style={{ height: "17500px", width: "100vw" }}>
 
           <AboutMe/>
           <Career/>

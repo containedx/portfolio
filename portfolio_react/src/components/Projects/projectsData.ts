@@ -58,7 +58,7 @@ export const projects: Project[] = [
     title: "Analysis and Processing of Images",
     years: "2020",
     topic: [ "C++", ".NET", "Computer Vision", "Algorithms", "Math" ],
-    description: "University Project, containing several Image Transformation. CLR application in .NET framework, using System::Drawing namespace. It presents Standard Deviation Filtration(with diferent masks), Diving objects on image into separate images, image closing - use of erosion and dilation procedure, Affine Transformations - scaling, rotation, shear, translate, affine image using transformation matrix.",
+    description: "Implementation of several Image Transformations. CLR application in .NET framework, using System::Drawing namespace. It presents Standard Deviation Filtration(with diferent masks), Diving objects on image into separate images, image closing - use of erosion and dilation procedure, Affine Transformations - scaling, rotation, shear, translate, affine image using transformation matrix. My favourite university project!",
     color: "#92A6DD",
     link: "https://github.com/containedx/Image-Processing/tree/master",
     picture1: image_processing1,
@@ -90,7 +90,7 @@ export const smallProjects: SmallProject[] = [
   {
     title: "Overcooked",
     topic: [ "Multiplayer", "Game Development", "C#", "Unity" ],
-    description: "Recreating popular Overcooked game. Improving my coding/Unity skills and practises by going through Code Monkey course, adding some modifications of my own. It's still in progress!",
+    description: "Recreating popular Overcooked game. Improving my coding/Unity skills and practises by going through Code Monkey course, adding some modifications of my own. It's currently in progress!",
     link: "https://github.com/containedx/purrfectly_cooked",
     picture: overcooked,
   },

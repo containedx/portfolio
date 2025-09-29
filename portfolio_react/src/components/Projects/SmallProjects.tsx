@@ -2,6 +2,8 @@ import { smallProjects } from "./projectsData.ts";
 import { motion } from "framer-motion";
 import Typewriter from "../Typewriter.tsx";
 
+import frame from "../../assets/img/frame.png";
+
 const SmallProjects: React.FC = () => {
   return (
     <section
@@ -11,8 +13,7 @@ const SmallProjects: React.FC = () => {
         alignItems: "center",
         gap: "5vh",
         padding: "5vh 2vw",
-        marginTop: "10vh",
-        marginBottom: "20vh",
+        backgroundColor: "#874c68ff"
       }}
     >
       {/* Main title */}
@@ -21,8 +22,9 @@ const SmallProjects: React.FC = () => {
           style={{
             fontSize: "8vh",
             fontWeight: "bold",
-            color: "#c7161fff",
+            color: "#efcaccff",
             textShadow: "2px 2px 6px rgba(0,0,0,0.6)",
+            marginTop: "10vh",
           }}
         >
           <Typewriter text="MORE PROJECTS ✨" />
@@ -34,7 +36,7 @@ const SmallProjects: React.FC = () => {
         style={{
           display: "flex",
           flexWrap: "wrap",
-          gap: "8vw",
+          gap: "3vw",
           justifyContent: "center",
         }}
       >
@@ -45,15 +47,20 @@ const SmallProjects: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              width: "40vh",
+              width: "55vh",
+              height: "40vh",
               borderRadius: "2vh",
               overflow: "hidden",
-              boxShadow: "0 1vh 2vh rgba(0,0,0,0.2)",
               textDecoration: "none",
               display: "flex",
               flexDirection: "column",
               position: "relative",
-              backgroundColor: "#ef92cbff",
+              backgroundImage: `url(${frame})`, 
+              backgroundSize: "100% 100%", 
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              padding: "3vh 2vh", 
+              boxSizing: "border-box",
             }}
           >
             {/* Image with fade out on hover */}
@@ -61,9 +68,12 @@ const SmallProjects: React.FC = () => {
               src={project.picture}
               alt={project.title}
               style={{
-                width: "100%",
+                width: "90%",
                 height: "20vh",
                 objectFit: "cover",
+                margin: "0 auto",
+                borderRadius: "10px",
+                marginTop: "2vh"
               }}
               whileHover={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
@@ -73,11 +83,11 @@ const SmallProjects: React.FC = () => {
             <motion.div
               style={{
                 position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
+                top: "4vh",
+                left: "2vh",
+                width: "85%",
                 height: "20vh",
-                backgroundColor: "#ef92cbff",
+                backgroundColor: "#e68eb8",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
@@ -85,6 +95,7 @@ const SmallProjects: React.FC = () => {
                 padding: "1.5vh",
                 opacity: 0,
                 textAlign: "center",
+                color: "black"
               }}
               whileHover={{ opacity: 1 }}
               transition={{ duration: 0.3 }}
@@ -128,6 +139,12 @@ const SmallProjects: React.FC = () => {
             </div>
           </a>
         ))}
+
+
+
+        <div style = {{ marginBottom: "20vh" }}>
+          <h2>find even more projects on my <a href="https://github.com/containedx">github</a> and <a href="https://containedx.itch.io/">itch.io</a></h2>
+        </div>
       </div>
     </section>
   );
