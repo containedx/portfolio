@@ -58,7 +58,7 @@ const SmallProjects: React.FC = () => {
           >
             {/* Image with fade out on hover */}
             <motion.img
-              src={project.picture1}
+              src={project.picture}
               alt={project.title}
               style={{
                 width: "100%",
@@ -89,7 +89,7 @@ const SmallProjects: React.FC = () => {
               whileHover={{ opacity: 1 }}
               transition={{ duration: 0.3 }}
             >
-              <p style={{ margin: 0, fontSize: "1.5vh", overflowWrap: "break-word" }}>
+              <p style={{ margin: "8vh", fontSize: "1.6vh", overflowWrap: "break-word" }}>
                 {project.description}
               </p>
             </motion.div>
