@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import flower from "../assets/img/flower.webp";
 import Typewriter from "./Typewriter";
 import frame from "../assets/img/frameLong.webp";
+import minecraftBackground from "../assets/img/backgroundFlowersMinecraft.png";
 
 const Career: React.FC = () => {
   const ref = useRef(null);
@@ -31,12 +32,15 @@ const Career: React.FC = () => {
     setActiveStage(index);
   });
 
+  const bgAlpha = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
+
   return (
     <section ref={ref} 
     style={{
         position: "relative",
         height: "400vh",
-        marginTop: "20vh"
+        marginTop: "20vh",
       }}
     >
       {/* sticky viewport */}
@@ -70,6 +74,22 @@ const Career: React.FC = () => {
           <Typewriter text="MY CAREER GROWTH 🌼" />
         </h1>
       </div>
+
+        {/* fade background*/}
+      <motion.div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundImage: `url(${minecraftBackground})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            zIndex: 0,
+            opacity: bgAlpha,
+          }}
+        />
 
       {/* stages */}
       {stages.map((stage, i) => {
