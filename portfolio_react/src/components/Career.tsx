@@ -1,8 +1,9 @@
 import { motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
-import cloud from "../assets/img/cloud.webp";
+//import cloud from "../assets/img/cloud.webp";
 import flower from "../assets/img/flower.webp";
 import Typewriter from "./Typewriter";
+import frame from "../assets/img/frameLong.webp";
 
 const Career: React.FC = () => {
   const ref = useRef(null);
@@ -23,7 +24,7 @@ const Career: React.FC = () => {
   // przesuwamy tylko tło
   const x = useTransform(scrollYProgress, [0, 1], ["0%", `-${(stages.length - 1) * 100}%`]);
 
-  const [activeStage, setActiveStage] = useState(0);
+  const [activeStage, setActiveStage] = useState(-1);
 
   useMotionValueEvent(scrollYProgress, "change", (p) => {
     const index = Math.round(p * (stages.length - 1 ));
@@ -41,114 +42,91 @@ const Career: React.FC = () => {
       {/* sticky viewport */}
       <div
         style={{
-          position: "sticky",
-          top: 0,
-          height: "100vh",
-          overflow: "hidden",
-        }}
-      >
-
-        {/* main title */}
-        <div
-          style={{
+        position: "sticky",
+        top: 0,
+        height: "100vh",
+        overflow: "hidden",
+      }}
+    >
+      {/* main title */}
+      <div
+        style={{
           position: "absolute",
           left: "50%",
           transform: "translateX(-50%)",
           zIndex: 20,
           textAlign: "center",
         }}
-        >
-          <h1
-            style={{
+      >
+        <h1
+          style={{
             fontSize: "8vh",
             fontWeight: "bold",
             color: "#688c71ff",
             textShadow: "2px 2px 6px rgba(0,0,0,0.6)",
             letterSpacing: "2px",
-            }}
-          > 
-              <Typewriter text="MY CAREER GROWTH 🌼"  />
-          </h1>
-        </div>
-
-        <div 
-        style={{
-            position: "absolute",
-            bottom: "1%",
-            left: "2%",
-            zIndex: 10
-          }}>
-
-
-        {/* growing flowers with stage */}
-          <div style={{ display: "flex", gap: "4px" }}>
-            {/* <h2>active stage {activeStage} </h2> */}
-            <div style={{ display: "flex", gap: "4px" }}>
-              {[...Array(stages.length)].map((_, i) => {
-                const isVisible = i <= activeStage;
-                //const isLast = i === activeStage;
-
-                return (
-                  <motion.img
-                    key={i}
-                    src={flower}
-                    alt="flower"
-                    style={{ height: "20vh" }}
-                    initial={{ scale: 0, y: 50, opacity: 0 }}
-                    animate={isVisible ? { scale: 1, y: 0, opacity: 1 } : { scale: 0, y: 50, opacity: 0 }}
-                    transition={{ type: "spring", stiffness: 120, damping: 12 }}
-                  />
-                );
-              })}
-            </div>
-          </div>
-        </div>
-
-        {/* career stages */}
-        <motion.div
-          style={{
-            display: "flex",
-            height: "100%",
-            x,
           }}
         >
-          {stages.map((stage, i) => (
+          <Typewriter text="MY CAREER GROWTH 🌼" />
+        </h1>
+      </div>
+
+      {/* stages */}
+      {stages.map((stage, i) => {
+
+        const isVisible = i <= activeStage;
+
+        return (
+          <motion.div
+            key={i}
+            initial={{ x: "100vw", opacity: 0, scale: 0.5 }}
+            animate={
+              isVisible
+                ? { x: "0vw", opacity: 1, scale: 0.8 }
+                : { x: "100vw", opacity: 0, scale: 0.5 }
+            }
+            transition={{
+              type: "spring",
+              stiffness: 100,
+              damping: 12,
+            }}
+            style={{
+              position: "absolute",
+              top: `${16 + i * 16}%`,
+              left: "23vw",
+              transform: "translateY(-50%)",
+              width: "50vw",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <div
-              key={i}
               style={{
-                minWidth: "100vw",
+                height: "16vh",
+                width: "100%",
+                backgroundImage: `url(${frame})`,
+                backgroundSize: "100% 100%",
+                backgroundRepeat: "no-repeat",
                 display: "flex",
+                flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
+                boxShadow: "0 8px 20px rgba(0,0,0,0.2)",
               }}
             >
-
-              <div
-                style={{
-                      height: "50vh",
-                      width: "50vw",
-                      backgroundImage: `url(${cloud})`,
-                      backgroundSize: "100% 100%",
-                      backgroundPosition: "center", 
-                      backgroundRepeat: "no-repeat",
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      
-                      }}
-              >     
-                  <h2 style = {{ lineHeight: "0"}}>{stage.years}</h2>
-                  <h2 style = {{fontSize: "2vw", lineHeight: "0"}}>{stage.role}</h2>
-                  <h2 style = {{ lineHeight: "0"}}>{stage.title}</h2>
-                  {stage.description}
-              </div>
-              
+              <h2 style={{ fontSize: "1.2vw", margin: 0 }}>{stage.years}</h2>
+              <h2 style={{ fontSize: "1.6vw", margin: 0 }}>{stage.role}</h2>
+              <h3 style={{ fontSize: "1vw", margin: 0 }}>{stage.title}</h3>
+              <p style={{ fontSize: "0.9vw", marginTop: "1vh" }}>
+                {stage.description}
+              </p>
             </div>
-          ))}
-        </motion.div>
+          </motion.div>
+        );
+      })}
+    </div>
 
-      </div>
     </section>
   );
 };
