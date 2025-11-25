@@ -18,14 +18,14 @@ const IntroCanvasSequence: React.FC<{ onReady?: () => void }> = ({ onReady }) =>
   const frameImages: HTMLImageElement[] = [];
   let loadedCount = 0;
 
-  for (let i = START_FRAME; i <= END_FRAME; i++) {
+  for (let i = START_FRAME; i < END_FRAME; i++) {
     const img = new Image();
     img.src = `/portfolio/background_intro/background000${i}.jpg`;
 
     img.onload = () => {
       console.log("loading image " + loadedCount + TOTAL_FRAMES);
       loadedCount++;
-      if (loadedCount === TOTAL_FRAMES) {
+      if (loadedCount >= Math.floor(TOTAL_FRAMES * 0.9)) {
         onReady?.();
       }
     };
