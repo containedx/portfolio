@@ -1,7 +1,7 @@
 import { motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 //import cloud from "../assets/img/cloud.webp";
-import flower from "../assets/img/flower.webp";
+//import flower from "../assets/img/flower.webp";
 import Typewriter from "./Typewriter";
 import frame from "../assets/img/frameLong.webp";
 import minecraftBackground from "../assets/img/backgroundFlowersMinecraft.png";
@@ -23,7 +23,7 @@ const Career: React.FC = () => {
 ];
 
   // przesuwamy tylko tło
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", `-${(stages.length - 1) * 100}%`]);
+  //const x = useTransform(scrollYProgress, [0, 1], ["0%", `-${(stages.length - 1) * 100}%`]);
 
   const [activeStage, setActiveStage] = useState(-1);
 
