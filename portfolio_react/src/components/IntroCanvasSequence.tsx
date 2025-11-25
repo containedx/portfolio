@@ -2,26 +2,40 @@ import React, { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 const TOTAL_FRAMES = 192;
 const START_FRAME = 86400;
 const END_FRAME = START_FRAME + TOTAL_FRAMES;
 
-const IntroCanvasSequence : React.FC = () =>
+const IntroCanvasSequence: React.FC<{ onReady?: () => void }> = ({ onReady }) =>
 {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [images, setImages] = useState<HTMLImageElement[]>([]);
 
   useEffect(() => {
-    const frameImages: HTMLImageElement[] = [];
-    for (let i = START_FRAME; i <= END_FRAME; i++) {
-      const img = new Image();
-      img.src =  `/portfolio/background_intro/background000${i}.jpg`;
-      frameImages.push(img);
-    }
-    setImages(frameImages);
-  }, []);
+  const frameImages: HTMLImageElement[] = [];
+  let loadedCount = 0;
+
+  for (let i = START_FRAME; i <= END_FRAME; i++) {
+    const img = new Image();
+    img.src = `/portfolio/background_intro/background000${i}.jpg`;
+
+    img.onload = () => {
+      console.log("loading image " + loadedCount + TOTAL_FRAMES);
+      loadedCount++;
+      if (loadedCount === TOTAL_FRAMES) {
+        onReady?.();
+      }
+    };
+
+    frameImages.push(img);
+  }
+
+  setImages(frameImages);
+}, []);
+
 
   useEffect(() => {
     if (images.length === 0 || !canvasRef.current) return;
