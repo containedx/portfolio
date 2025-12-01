@@ -68,7 +68,7 @@ const Education: React.FC = () => {
         >
           <h1
             style={{
-              fontSize: "8vh",
+              fontSize: "4vw",
               fontWeight: "bold",
               color: "#688c71ff",
               textShadow: "2px 2px 6px rgba(0,0,0,0.6)",

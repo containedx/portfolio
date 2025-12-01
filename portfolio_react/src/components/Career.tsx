@@ -64,7 +64,7 @@ const Career: React.FC = () => {
       >
         <h1
           style={{
-            fontSize: "8vh",
+            fontSize: "4vw",
             fontWeight: "bold",
             color: "#688c71ff",
             textShadow: "2px 2px 6px rgba(0,0,0,0.6)",
@@ -110,20 +110,24 @@ const Career: React.FC = () => {
               stiffness: 100,
               damping: 12,
             }}
+
+
             style={{
               position: "absolute",
               top: `${16 + i * 16}%`,
-              left: "23vw",
+              left: "10vw",
               transform: "translateY(-50%)",
-              width: "50vw",
+              width: "80vw",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
             }}
           >
+
+            
             <div
               style={{
-                height: "16vh",
+                height: "18vh",
                 width: "100%",
                 backgroundImage: `url(${frame})`,
                 backgroundSize: "100% 100%",
@@ -135,10 +139,10 @@ const Career: React.FC = () => {
                 boxShadow: "0 8px 20px rgba(0,0,0,0.2)",
               }}
             >
-              <h2 style={{ fontSize: "1.2vw", margin: 0 }}>{stage.years}</h2>
-              <h2 style={{ fontSize: "1.6vw", margin: 0 }}>{stage.role}</h2>
-              <h3 style={{ fontSize: "1vw", margin: 0 }}>{stage.title}</h3>
-              <p style={{ fontSize: "0.9vw", marginTop: "1vh" }}>
+              <h2 style={{ fontSize: "1.5vw", margin: 0 }}>{stage.years}</h2>
+              <h2 style={{ fontSize: "1.8vw", margin: 0 }}>{stage.role}</h2>
+              <h3 style={{ fontSize: "1.5vw", margin: 0 }}>{stage.title}</h3>
+              <p style={{ fontSize: "1vw", marginTop: "1vh" }}>
                 {stage.description}
               </p>
             </div>

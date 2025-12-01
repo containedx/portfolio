@@ -30,7 +30,7 @@ const Projects: React.FC = () => {
         
         {/* Main title */}
         <div style={{ position: "absolute", left: 0, right: 0, zIndex: 20, textAlign: "center" }}>
-          <h1 style={{ fontSize: "8vh", fontWeight: "bold", color: "#c7161fff", textShadow: "2px 2px 6px rgba(0,0,0,0.6)" }}>
+          <h1 style={{ fontSize: "4vw", fontWeight: "bold", color: "#c7161fff", textShadow: "2px 2px 6px rgba(0,0,0,0.6)" }}>
             <Typewriter text="HIGHLIGHTED PROJECTS 🚀"  />
           </h1>
         </div>

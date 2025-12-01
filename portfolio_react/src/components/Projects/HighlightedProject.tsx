@@ -15,7 +15,7 @@ const HighlightedProject: React.FC<ProjectProps> = ( {project} ) => {
         maxWidth: "1600px",
         padding: "2rem",
         boxSizing: "border-box",
-        marginTop: "10vh"
+        marginTop: window.innerWidth <= 768 ? "0px" : "10vh"
       }}
     >
       {/* Text Section */}
@@ -26,8 +26,8 @@ const HighlightedProject: React.FC<ProjectProps> = ( {project} ) => {
         }}
       >
 
-        <h1 style={{ marginTop:"8vh", fontFamily: "'Montserrat', sans-serif", }}>{project.title}</h1>
-        <h2 style={{ marginTop: "4vh", marginBottom: "4vh" }}>{project.years}</h2>
+        <h1 style={{ marginTop: window.innerWidth <= 768 ? "1vh" : "8vh", fontFamily: "'Montserrat', sans-serif", fontSize: window.innerWidth <= 768 ? "0.9rem" : "2rem" }}>{project.title}</h1>
+        <h2 style={{ marginTop: window.innerWidth <= 768 ? "1vh" : "4vh", marginBottom: window.innerWidth <= 768 ? "1vh" : "4vh" }}>{project.years}</h2>
         
         <div
           style={{
@@ -46,7 +46,7 @@ const HighlightedProject: React.FC<ProjectProps> = ( {project} ) => {
                 color: "#fff",
                 padding: "0.4rem 1rem",
                 borderRadius: "9999px", // makes it fully rounded
-                fontSize: "0.9rem",
+                fontSize: "0.8rem",
                 fontWeight: 800,
                 display: "inline-block",
                 fontFamily: "'Montserrat', sans-serif",
@@ -60,34 +60,41 @@ const HighlightedProject: React.FC<ProjectProps> = ( {project} ) => {
 
 
         
-        <p style={{ margin: "5vh" }}>{project.description}</p>
+        <p style={{ margin: window.innerWidth <= 768 ? "1vh" : "5vh", fontSize: window.innerWidth <= 768 ? "0.9rem" : "1.2rem" }}>
+          {project.description}
+        </p>
 
-        <h2>
-              for more information and demo visit github project site: <a href={project.link} target="_blank" rel="noopener noreferrer">github</a>
+        <h2 style={{ fontSize: window.innerWidth <= 768 ? "0.9rem" : "1.2rem" }}>
+              for more information visit github: <a href={project.link} target="_blank" rel="noopener noreferrer">github</a>
         </h2>
       </div>
 
-      {/* Images Section   TODO: NEEDS SOME STYLING  ITS TERRIBLE */}
+      {/* Images Section */}
       <div
         style={{
           flex: "1 1 300px",
           minWidth: "280px",
           display: "flex",
-          flexDirection: "column",
+          flexDirection: window.innerWidth <= 768 ? "row" : "column",
           gap: "1rem",
         }}
       >
         <img
           src={project.picture1}
           alt={`${project.title} 1`}
-          style={{ width: "30vw", height: "auto", borderRadius: "8px", objectFit: "cover" }}
+          style={{ width: window.innerWidth <= 768 ? "40vw" : "30vw", height: "auto", borderRadius: "8px", objectFit: "cover" }}
         />
         <img
           src={project.picture2}
           alt={`${project.title} 2`}
-          style={{ width: "30vw", height: "auto", borderRadius: "8px", objectFit: "cover" }}
+          style={{ width: window.innerWidth <= 768 ? "40vw" : "30vw", height: "auto", borderRadius: "8px", objectFit: "cover" }}
         />
       </div>
+
+
+
+        
+
     </div>
     );
 }
