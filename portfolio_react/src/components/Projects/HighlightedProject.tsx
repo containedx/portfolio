@@ -65,7 +65,7 @@ const HighlightedProject: React.FC<ProjectProps> = ( {project} ) => {
         </p>
 
         <h2 style={{ fontSize: window.innerWidth <= 768 ? "0.9rem" : "1.2rem" }}>
-              for more information visit github: <a href={project.link} target="_blank" rel="noopener noreferrer">github</a>
+              for more information visit: <a href={project.link} target="_blank" rel="noopener noreferrer">LINK</a>
         </h2>
       </div>
 

@@ -21,6 +21,10 @@ import overcooked from "../../assets/img/projects/overcooked.gif";
 import python from "../../assets/img/projects/mandala.gif";
 import laravel from "../../assets/img/projects/laravel.png";
 import color_mix from "../../assets/img/projects/color_mix.gif";
+import smash_therapy1 from "../../assets/img/projects/smash_therapy_title.png";
+import smash_therapy2 from "../../assets/img/projects/smash_therapy_gameplay.gif";
+import quiz1 from "../../assets/img/projects/quizzer.jpg";
+import quiz2 from "../../assets/img/projects/quizzer_gameplay.gif";
 
 
 
@@ -49,11 +53,31 @@ export interface SmallProject {
 
 export const projects: Project[] = [
   {
+    title: "Ultimate Bezzer Quizzer",
+    years: "2025",
+    topic: [ "Game Development", "C#", "Unity" ],
+    description: "Game developed at Hello There Games and released on Steam in december 2025. It is 3d quiz game where you can also navigate the board with characters. I worked on gameplay features, UI, and systems supporting game flow. ",
+    color: "#E7D7F4",
+    link: "https://store.steampowered.com/app/4010090/The_Ultimate_BezzerQuizzer/",
+    picture1: quiz1,
+    picture2: quiz2,
+  },
+  {
+    title: "VR Game Smash Therapy",
+    years: "2025",
+    topic: [ "VR", "Game Development", "C#", "Unity" ],
+    description: "Project I was a part of at Hello There Games. Released on meta quest. It is game about fun, chaotic destruction. I worked here on 3d objects fracturing, gameplay, UI and interactions in VR. It was my first project in VR and it was amazing to get to learn it.",
+    color: "#EAB6DF",
+    link: "https://www.meta.com/en-gb/experiences/smash-therapy/7739327216170951/",
+    picture1: smash_therapy1,
+    picture2: smash_therapy2,
+  },
+  {
     title: "Visualisation Of Boids Algorithm in Unity",
     years: "2020",
     topic: [ "Artifical Intelligence", "Algorithms", "Game Development", "C#", "Unity" ],
     description: "Project created for Engineer's Thesis. It presents simulation of Boids Algorithm. First invented by Craig Reynolds, it simulates flock behaviour(such as birds, sheep, fish flock) using  three simple rules: separation, alignment, and cohesion. In project I included a target that is followed by intelligent flock. To show practical use of this algorithm I created game that uses boids algorithm for enemies. This algorithm is widely used in movies and games, for realistic crowd behaviour, animal herd behaviour, swarm robotics.",
-    color: "#ef92cbff",
+    color: "#EF92CB",
     link: "https://github.com/containedx/Boids-Algorithm-In-Unity",
     picture1: boids1,
     picture2: boids2,
@@ -63,7 +87,7 @@ export const projects: Project[] = [
     years: "2020",
     topic: [ "C++", ".NET", "Computer Vision", "Algorithms", "Math" ],
     description: "Implementation of several Image Transformations. CLR application in .NET framework, using System::Drawing namespace. It presents Standard Deviation Filtration(with diferent masks), Diving objects on image into separate images, image closing - use of erosion and dilation procedure, Affine Transformations - scaling, rotation, shear, translate, affine image using transformation matrix. My favourite university project!",
-    color: "#92A6DD",
+    color: "#C274A3",
     link: "https://github.com/containedx/Image-Processing/tree/master",
     picture1: image_processing1,
     picture2: image_processing2,
@@ -73,7 +97,7 @@ export const projects: Project[] = [
     years: "2023",
     topic: [ "Godot Engine", "gdscript", "Game Development", "Art" ],
     description: "I always wanted to do my resume in form of a game, and I finally did. In role of orange pixel cat you can explore my journey as a programmer. I created most of pixel art and other assets in the game. I made it in Godot Engine. ",
-    color: "#ef92cbff",
+    color: "#9E5E80",
     link: "https://github.com/containedx/interactive-resume",
     picture1: resume1,
     picture2: resume2,
@@ -83,7 +107,7 @@ export const projects: Project[] = [
     years: "2022",
     topic: [ "Artifical Intelligence", "Algorithms", "Game Development", "Godot Engine" ],
     description: "tic tac toe game with AI opponent you can never win with. Intelligent opponent is created using Minimax Algorithm. fun fact: when AI goes first, if you dont put your sign in the middle of the board you will 100% loose! Your best chance is always a tie. ",
-    color: "#92A6DD",
+    color: "#874C68",
     link: "https://github.com/containedx/tic-tac-toe-AI",
     picture1: tictactoe1,
     picture2: tictactoe2,

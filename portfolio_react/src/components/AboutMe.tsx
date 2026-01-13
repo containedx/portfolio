@@ -1,13 +1,13 @@
 import { motion } from "motion/react";
 import my_img from "../assets/img/COLLAGE_ME.png";
-import arcade from "../assets/img/arcade.gif";
-import aura from "../assets/img/aura.webp";
+//import arcade from "../assets/img/arcade.gif";
+//import aura from "../assets/img/aura.webp";
 import background_blue_aura from "../assets/img/blue_background_aura.webp";
 
 import Typewriter from "./Typewriter";
 
 const ABOUT_ME_TEXT : string = "I'm Kinga 💻 I like programming, being creative and self development 👾 ";
-const I_LOVE_TEXT : string = "words to describe me would be: 🌸 creative 🎨 organized 🗒️ curious 🌎 ambitious 🤖 analytical 🧠 persistent ⚡foodie 🍝 mermaid 🌊";
+//const I_LOVE_TEXT : string = "words to describe me would be: 🌸 creative 🎨 organized 🗒️ curious 🌎 ambitious 🤖 analytical 🧠 persistent ⚡foodie 🍝 mermaid 🌊";
 
 const AboutMe : React.FC = () => {
 
