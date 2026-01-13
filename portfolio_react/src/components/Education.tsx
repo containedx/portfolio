@@ -22,12 +22,12 @@ const Education: React.FC = () => {
   });
 
   const stages = [
-    { title: "Scrum", img: scrum, description: "description" },
-    { title: "Ai Algorithms for Gaming", img: ai_gaming, description: "description" },
-    { title: "Unreal", img: unreal, description: "description" },
-    { title: "Ai Unity", img: ai_unity, description: "description" },
-    { title: "UI UX", img: ui_ux, description: "description" },
-    { title: "AI in Business Development", img: ai_business, description: "description" },
+    { title: "Scrum", img: scrum, description: "during my studies I had the opportunity to participate in official Scrum Master and Agile course. I learned this iterative workflow early, and it was applied in some way in all my professional experiences." },
+    { title: "Ai Algorithms for Gaming", img: ai_gaming, description: "course about AI algorithims and their practical application in gaming. It focused on turn-based games, minimax algorithm, depth-limited search and iterative deepening." },
+    { title: "Unreal", img: unreal, description: "learning basics of development in Unreal Engine" },
+    { title: "Ai Unity", img: ai_unity, description: "very practical AI algorithms course in Unity environment. It includes for example waypoints, navigation, nav meshes, crowd simulation, behaviour trees and goal oriented action planning." },
+    { title: "UI UX", img: ui_ux, description: "getting to know UI and UX design principles. Hands on experience with Figma and design." },
+    { title: "AI in Business Development", img: ai_business, description: "course organized by Google I got in. It focused on efficient usage of AI as well as possibilities it gives, especially in business and automation." },
     //{ title: "English C2", img: english, description: "description" },
   ];
 
