@@ -1,10 +1,7 @@
 import { motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
-//import cloud from "../assets/img/cloud.webp";
-//import flower from "../assets/img/flower.webp";
 import Typewriter from "./Typewriter";
-import frame from "../assets/img/frameLong.webp";
-import minecraftBackground from "../assets/img/backgroundFlowersMinecraft.png";
+import cloud from "../assets/img/cloud3.png";
 
 const Career: React.FC = () => {
   const ref = useRef(null);
@@ -15,142 +12,155 @@ const Career: React.FC = () => {
   });
 
   const stages = [
-  { title: "Bachelor of Engineering Deegree", role: "Applied Computer Science", color: "#9084b4ff", years: "2017 - 2021", description: "University of Science And Technology Krakow" },
-  { title: "Push Gaming", role: "Game Developer", color: "#56679fff", years: "2020", description: "javascript ● typescript ● PixiJS ● web browser games"},
-  { title: "Intermarum", role: "Game Developer", color: "#cc9c68ff", years: "2021", description: " C# ● UnityEngine" },
-  { title: "Plucky Bytes", role: "Game Programmer", color: "#d572d5ff", years: "2021 - 2023", description: " gdscript ● C++ ● Godot Engine " },
-  { title: "Hello There Games", role: "Game Developer", color: "#68935bff", years: "2023 - now", description: "C# ● Unity Engine" },
-];
-
-  // przesuwamy tylko tło
-  //const x = useTransform(scrollYProgress, [0, 1], ["0%", `-${(stages.length - 1) * 100}%`]);
+    {
+      title: "Bachelor of Engineering Degree",
+      role: "Applied Computer Science",
+      years: "2017 - 2021",
+      description: "University of Science And Technology Krakow",
+    },
+    {
+      title: "Push Gaming",
+      role: "Game Developer",
+      years: "2020",
+      description: "JavaScript ● TypeScript ● PixiJS",
+    },
+    {
+      title: "Intermarum",
+      role: "Game Developer",
+      years: "2021",
+      description: "C# ● Unity Engine",
+    },
+    {
+      title: "Plucky Bytes",
+      role: "Game Programmer",
+      years: "2021 - 2023",
+      description: "GDScript ● C++ ● Godot Engine",
+    },
+    {
+      title: "Hello There Games",
+      role: "Game Developer",
+      years: "2023 - now",
+      description: "C# ● Unity Engine",
+    },
+  ];
 
   const [activeStage, setActiveStage] = useState(-1);
 
   useMotionValueEvent(scrollYProgress, "change", (p) => {
-    const index = Math.round(p * (stages.length - 1 ));
+    const index = Math.round(p * (stages.length - 1));
     setActiveStage(index);
   });
 
-  const bgAlpha = useTransform(scrollYProgress, [0, 1], [0, 1]);
-
-
   return (
-    <section ref={ref} 
-    style={{
+    <section
+      ref={ref}
+      style={{
         position: "relative",
         height: "400vh",
         marginTop: "20vh",
       }}
     >
-      {/* sticky viewport */}
       <div
         style={{
-        position: "sticky",
-        top: 0,
-        height: "100vh",
-        overflow: "hidden",
-      }}
-    >
-      {/* main title */}
-      <div
-        style={{
-          position: "absolute",
-          left: "50%",
-          transform: "translateX(-50%)",
-          zIndex: 20,
-          textAlign: "center",
+          position: "sticky",
+          top: 0,
+          height: "100vh",
+          overflow: "hidden",
         }}
       >
-        <h1
-          style={{
-            fontSize: "4vw",
-            fontWeight: "bold",
-            color: "#688c71ff",
-            textShadow: "2px 2px 6px rgba(0,0,0,0.6)",
-            letterSpacing: "2px",
-          }}
-        >
-          <Typewriter text="MY CAREER GROWTH 🌼" />
-        </h1>
-      </div>
-
-        {/* fade background*/}
-      <motion.div
+        {/* TITLE */}
+        <div
           style={{
             position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            backgroundImage: `url(${minecraftBackground})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            zIndex: 0,
-            opacity: bgAlpha,
+            top: "4vh",
+            left: "50%",
+            transform: "translateX(-50%)",
+            zIndex: 20,
+            textAlign: "center",
           }}
-        />
-
-      {/* stages */}
-      {stages.map((stage, i) => {
-
-        const isVisible = i <= activeStage;
-
-        return (
-          <motion.div
-            key={i}
-            initial={{ x: "100vw", opacity: 0, scale: 0.5 }}
-            animate={
-              isVisible
-                ? { x: "0vw", opacity: 1, scale: 0.8 }
-                : { x: "100vw", opacity: 0, scale: 0.5 }
-            }
-            transition={{
-              type: "spring",
-              stiffness: 100,
-              damping: 12,
-            }}
-
-
+        >
+          <h1
             style={{
-              position: "absolute",
-              top: `${16 + i * 16}%`,
-              left: "10vw",
-              transform: "translateY(-50%)",
-              width: "80vw",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
+              fontSize: "4vw",
+              fontWeight: "bold",
+              color: "#688c71ff",
+              textShadow: "2px 2px 6px rgba(0,0,0,0.6)",
             }}
           >
+            <Typewriter text="MY CAREER GROWTH 🌼" />
+          </h1>
+        </div>
 
-            
-            <div
-              style={{
-                height: "18vh",
-                width: "100%",
-                backgroundImage: `url(${frame})`,
-                backgroundSize: "100% 100%",
-                backgroundRepeat: "no-repeat",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                boxShadow: "0 8px 20px rgba(0,0,0,0.2)",
-              }}
-            >
-              <h2 style={{ fontSize: "1.5vw", margin: 0 }}>{stage.years}</h2>
-              <h2 style={{ fontSize: "1.8vw", margin: 0 }}>{stage.role}</h2>
-              <h3 style={{ fontSize: "1.5vw", margin: 0 }}>{stage.title}</h3>
-              <p style={{ fontSize: "1vw", marginTop: "1vh" }}>
-                {stage.description}
-              </p>
-            </div>
-          </motion.div>
-        );
-      })}
-    </div>
+        {/* STAGES FLEX WRAP */}
+        <div
+          style={{
+            position: "absolute",
+            top: "25vh",
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: "100%",
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center", 
+            gap: "3vh", 
+            zIndex: 10,
+          }}
+        >
+          {stages.map((stage, i) => {
+            const isVisible = i <= activeStage;
 
+            return (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 50 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                transition={{ type: "spring", stiffness: 120, damping: 14 }}
+                style={{
+                  height: "35vh",
+                  width: "30vw",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+
+                {/* CLOUD */}
+                <motion.div
+                  style={{
+                    height: "100%",
+                    width: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    textAlign: "center",
+                    padding: "1vh",
+                    backgroundImage: `url(${cloud})`,
+                    backgroundSize: "100% 100%",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                  animate={{
+                    x: ["0px", "5px", "-5px", "3px", "0px"],
+                    y: ["0px", "3px", "-3px", "2px", "0px"],
+                  }}
+                  transition={{
+                    duration: 6 + Math.random() * 4,  // random duration 6-10s for each cloud
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    ease: "easeInOut",
+                  }}
+                >
+                    <h2 style={{ fontSize: "1.2vw", margin: 0 }}>{stage.years}</h2>
+                    <h2 style={{ fontSize: "1.5vw", margin: 0, color:"#B7C9E2" }}>{stage.role}</h2>
+                    <h3 style={{ fontSize: "1vw", margin: 0 }}>{stage.title}</h3>
+                    <p style={{ fontSize: "0.9vw", marginTop: "0.5vh" }}>{stage.description}</p>
+                </motion.div>
+
+                {/* END CLOUD */}
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
     </section>
   );
 };
