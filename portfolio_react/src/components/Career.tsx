@@ -1,9 +1,11 @@
-import { motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useRef, useState } from "react";
 import Typewriter from "./Typewriter";
 import cloud from "../assets/img/cloud3.png";
 
 const Career: React.FC = () => {
+  const isMobile = window.innerWidth < 768;
+
   const ref = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -13,33 +15,33 @@ const Career: React.FC = () => {
 
   const stages = [
     {
-      title: "Bachelor of Engineering Degree",
-      role: "Applied Computer Science",
+      title: "Applied Computer Science",
+      role: "Studies",
       years: "2017 - 2021",
-      description: "University of Science And Technology Krakow",
+      description: "C++ ● C ● web dev ● math ● physics ● java ● php ● linux ● python",
     },
     {
       title: "Push Gaming",
       role: "Game Developer",
-      years: "2020",
+      years: "July 2020 - September 2020",
       description: "JavaScript ● TypeScript ● PixiJS",
     },
     {
       title: "Intermarum",
       role: "Game Developer",
-      years: "2021",
+      years: "February 2021 - August 2021",
       description: "C# ● Unity Engine",
     },
     {
       title: "Plucky Bytes",
       role: "Game Programmer",
-      years: "2021 - 2023",
+      years: "October 2021 - May 2023",
       description: "GDScript ● C++ ● Godot Engine",
     },
     {
       title: "Hello There Games",
       role: "Game Developer",
-      years: "2023 - now",
+      years: "November 2023 - now",
       description: "C# ● Unity Engine",
     },
   ];
@@ -95,7 +97,7 @@ const Career: React.FC = () => {
         <div
           style={{
             position: "absolute",
-            top: "25vh",
+            top: isMobile ? "15vh" :"25vh",
             left: "50%",
             transform: "translateX(-50%)",
             width: "100%",
@@ -116,8 +118,8 @@ const Career: React.FC = () => {
                 animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ type: "spring", stiffness: 120, damping: 14 }}
                 style={{
-                  height: "35vh",
-                  width: "30vw",
+                  height: isMobile ? "20vh" : "35vh",
+                  width: isMobile ? "46vw" : "30vw",
                   display: "flex",
                   justifyContent: "center",
                 }}
@@ -149,10 +151,21 @@ const Career: React.FC = () => {
                     ease: "easeInOut",
                   }}
                 >
-                    <h2 style={{ fontSize: "1.2vw", margin: 0 }}>{stage.years}</h2>
-                    <h2 style={{ fontSize: "1.5vw", margin: 0, color:"#B7C9E2" }}>{stage.role}</h2>
-                    <h3 style={{ fontSize: "1vw", margin: 0 }}>{stage.title}</h3>
-                    <p style={{ fontSize: "0.9vw", marginTop: "0.5vh" }}>{stage.description}</p>
+                    <h2 style={{ fontSize: isMobile ? "0.6rem" : "1.2vw", margin: 0 }}>
+                      {stage.years}
+                    </h2>
+
+                    <h2 style={{ fontSize: isMobile ? "1.4rem" : "1.5vw", margin: 0, color:"#B7C9E2", fontFamily: "JetBrains Mono, monospace" }}>
+                      {stage.role}
+                    </h2>
+
+                    <h3 style={{ fontSize: isMobile ? "1rem" : "1vw", margin: 0 }}>
+                      {stage.title}
+                    </h3>
+
+                    {!isMobile && (<p style={{ fontSize: "0.9vw", marginTop: "0.5vh", width: "30vh", }}>
+                      {stage.description}
+                    </p>)}
                 </motion.div>
 
                 {/* END CLOUD */}

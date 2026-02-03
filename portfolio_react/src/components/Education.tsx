@@ -4,7 +4,6 @@ import Typewriter from "./Typewriter";
 
 // images
 //import certificate from "../assets/img/certificates/certificate.webp";
-import university from "../assets/img/university.webp";
 import ai_gaming from "../assets/img/certificates/ai_algorithms_for_gaming.png";
 import ai_business from "../assets/img/certificates/AI_business.png";
 import ai_unity from "../assets/img/certificates//AI_unity.png";
@@ -12,6 +11,8 @@ import ai_unity from "../assets/img/certificates//AI_unity.png";
 import scrum from "../assets/img/certificates/ScrumMasterCertified-KingaZawarty.png";
 import ui_ux from "../assets/img/certificates/UI_UX.png";
 import unreal from "../assets/img/certificates/unreal_essential.png";
+
+import agh from "../assets/img/agh.jpg";
 
 const Education: React.FC = () => {
   const ref = useRef(null);
@@ -32,6 +33,8 @@ const Education: React.FC = () => {
   ];
 
   const [activeStage, setActiveStage] = useState(0);
+
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
   useMotionValueEvent(scrollYProgress, "change", (p) => {
     const index = Math.floor(p * stages.length);
@@ -78,26 +81,53 @@ const Education: React.FC = () => {
             <Typewriter text="MY EDUCATION 🎓"  />
           </h1>
         </div>
-
-        <motion.img
-          src={university}
-          alt="university"
+        
+        {/* university */}
+        <motion.div
           style={{
             position: "absolute",
-            top: "15vh",
+            top: isMobile ? "15vh" : "28vh",
             height: "80vh",
-            width: "40vh",
-            marginLeft: "10vh",
+            width: isMobile ? "46vh" : "60vh",
+            marginLeft: "8vh",
             objectFit: "contain",
           }}
           initial={{ scale: 0, y: 50, opacity: 0 }}
           whileInView={{ scale: 1, y: 0, opacity: 1 }}
           transition={{ type: "spring", stiffness: 120, damping: 12 }}
           viewport={{ once: false, amount: 0.2 }}
-        />
+        >
+          
+          <div style={{ opacity: 0.7, fontSize: "2rem", marginBottom: "1rem" }}>
+            2017 — 2021
+          </div>
+
+          <div style={{ fontSize: "1.2rem", fontWeight: 600 }}>
+            AGH University of Kraków
+          </div>
+
+          <div style={{ fontSize: "2rem", opacity: 0.85, marginTop: "1rem", fontFamily: "JetBrains Mono, monospace", }}>
+            Applied Computer Science
+          </div>
+
+          <div style={{ fontSize: "1.2rem", opacity: 0.6, marginTop: "0.25rem"}}>
+            Bachelor of Engineering
+          </div>
+
+          <img
+            src={agh}
+            style={{
+              marginTop: "1rem",
+              width: "60%",
+              objectFit: "contain",
+              opacity: 0.95,
+            }}
+          />
+
+        </motion.div>
 
         {/* certificates */}
-        <div
+        {!isMobile && ( <div
           style={{
             position: "absolute",
             top: "15vh",
@@ -177,6 +207,7 @@ const Education: React.FC = () => {
             })}
           </div>
         </div>
+      )}
       </div>
     </section>
   );

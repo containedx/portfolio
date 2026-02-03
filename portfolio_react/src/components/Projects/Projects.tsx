@@ -4,6 +4,7 @@ import Typewriter from "../Typewriter";
 import HighlightedProject from "./HighlightedProject.tsx";
 import { projects } from "./projectsData.ts"
 
+
 const Projects: React.FC = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });

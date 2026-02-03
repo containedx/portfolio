@@ -20,7 +20,7 @@ const SmallProjects: React.FC = () => {
       <div style={{ textAlign: "center", marginBottom: "5vh" }}>
         <h1
           style={{
-            fontSize: "8vh",
+            fontSize: "4vw",
             fontWeight: "bold",
             color: "#efcaccff",
             textShadow: "2px 2px 6px rgba(0,0,0,0.6)",

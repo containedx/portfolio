@@ -11,6 +11,8 @@ const ABOUT_ME_TEXT : string = "I'm Kinga 💻 I like programming, being creativ
 
 const AboutMe : React.FC = () => {
 
+    const isMobile = window.innerWidth < 768;
+
     return (
     <section>
 
@@ -20,6 +22,7 @@ const AboutMe : React.FC = () => {
         position: "relative",
         display: "flex",
         flexWrap: "wrap",
+        flexDirection: isMobile ? "column" : "row",
         alignItems: "center",
         justifyContent: "space-between",
         gap: "2rem",
@@ -53,6 +56,10 @@ const AboutMe : React.FC = () => {
       <div style={{ flex: 1,  maxWidth: "40vw", fontSize: "3vw" }}>
         <h2> <Typewriter text="Hi! ✨"  /> </h2> 
         <Typewriter text={ABOUT_ME_TEXT}   />
+
+        {isMobile && (
+          <p>for the full experience, visit on desktop</p>
+        )}
       </div>
 
       {/* Right: Image */}

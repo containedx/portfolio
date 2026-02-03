@@ -53,26 +53,6 @@ export interface SmallProject {
 
 export const projects: Project[] = [
   {
-    title: "Ultimate Bezzer Quizzer",
-    years: "2025",
-    topic: [ "Game Development", "C#", "Unity" ],
-    description: "Game developed at Hello There Games and released on Steam in december 2025. It is 3d quiz game where you can also navigate the board with characters. I worked on gameplay features, UI, and systems supporting game flow. ",
-    color: "#E7D7F4",
-    link: "https://store.steampowered.com/app/4010090/The_Ultimate_BezzerQuizzer/",
-    picture1: quiz1,
-    picture2: quiz2,
-  },
-  {
-    title: "VR Game Smash Therapy",
-    years: "2025",
-    topic: [ "VR", "Game Development", "C#", "Unity" ],
-    description: "Project I was a part of at Hello There Games. Released on meta quest. It is game about fun, chaotic destruction. I worked here on 3d objects fracturing, gameplay, UI and interactions in VR. It was my first project in VR and it was amazing to get to learn it.",
-    color: "#EAB6DF",
-    link: "https://www.meta.com/en-gb/experiences/smash-therapy/7739327216170951/",
-    picture1: smash_therapy1,
-    picture2: smash_therapy2,
-  },
-  {
     title: "Visualisation Of Boids Algorithm in Unity",
     years: "2020",
     topic: [ "Artifical Intelligence", "Algorithms", "Game Development", "C#", "Unity" ],
@@ -111,6 +91,26 @@ export const projects: Project[] = [
     link: "https://github.com/containedx/tic-tac-toe-AI",
     picture1: tictactoe1,
     picture2: tictactoe2,
+  },
+  {
+    title: "Ultimate Bezzer Quizzer",
+    years: "2025",
+    topic: [ "Game Development", "C#", "Unity" ],
+    description: "Game developed at Hello There Games and released on Steam in december 2025. It is 3d quiz game where you can also navigate the board with characters. I worked on gameplay features, UI, and systems supporting game flow. ",
+    color: "#E7D7F4",
+    link: "https://store.steampowered.com/app/4010090/The_Ultimate_BezzerQuizzer/",
+    picture1: quiz1,
+    picture2: quiz2,
+  },
+  {
+    title: "VR Game Smash Therapy",
+    years: "2025",
+    topic: [ "VR", "Game Development", "C#", "Unity" ],
+    description: "Project I was a part of at Hello There Games. Released on meta quest. It is game about fun, chaotic destruction. I worked here on 3d objects fracturing, gameplay, UI and interactions in VR. It was my first project in VR and it was amazing to get to learn it.",
+    color: "#EAB6DF",
+    link: "https://www.meta.com/en-gb/experiences/smash-therapy/7739327216170951/",
+    picture1: smash_therapy1,
+    picture2: smash_therapy2,
   },
 ];
 
