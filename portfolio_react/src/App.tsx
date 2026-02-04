@@ -27,6 +27,9 @@ const App: React.FC = () => {
     }
   }, [imagesReady, minTimePassed]);
 
+
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <div style={{ position: "relative" }}>
       <IntroCanvasSequence onReady={() => setImagesReady(true)} />
@@ -38,12 +41,28 @@ const App: React.FC = () => {
           <div style={{ height: "5500px", width: "100vw" }} />
           <main style={{  width: "100vw" }}>
             <AboutMe />
-            <Career />
-            <Education />
-            <Projects />
-            <SmallProjects />
-            <ArtSide />
-            <Hobbies />
+
+            {isMobile && (
+              <p style={{ height: "30vh",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          textAlign: "center",
+                          padding: "2rem",
+                          fontSize: "2rem"}}>
+                please visit on desktop. Mobile version under construction 🚧
+              </p>
+            )}
+
+            {!isMobile && (
+            <>
+              <Career />
+              <Education />
+              <Projects />
+              <SmallProjects />
+              <ArtSide />
+              <Hobbies />
+            </>)}
           </main>
         </div>
       )}

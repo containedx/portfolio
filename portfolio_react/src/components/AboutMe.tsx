@@ -53,13 +53,9 @@ const AboutMe : React.FC = () => {
   </motion.div>
 
       {/* Left: Captions */}
-      <div style={{ flex: 1,  maxWidth: "40vw", fontSize: "3vw" }}>
+      <div style={{ flex: 1,  maxWidth: "40vw", fontSize: isMobile ? "2rem" : "3vw" }}>
         <h2> <Typewriter text="Hi! ✨"  /> </h2> 
         <Typewriter text={ABOUT_ME_TEXT}   />
-
-        {isMobile && (
-          <p>for the full experience, visit on desktop</p>
-        )}
       </div>
 
       {/* Right: Image */}
