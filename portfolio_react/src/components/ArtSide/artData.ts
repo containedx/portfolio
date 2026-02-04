@@ -2,7 +2,8 @@ import placeholder from "../../assets/img/hobby/tiktok.gif";
 import sushi_animation from "../../assets/img/hobby/sushi_gif.gif";
 import jewerly from "../../assets/img/hobby/jewerly.jpg";
 import travel from "../../assets/img/hobby/travel.jpg";
-import { tr } from "motion/react-client";
+import game_book from "../../assets/img/hobby/game_book.png";
+
 
 export interface ArtData {
   title: string;
@@ -35,7 +36,7 @@ export const artData: ArtData[] = [
     color: "#C274A3",
     picture1: travel,
     picture2: jewerly,
-    picture3: placeholder,
+    picture3: game_book,
   },
   {
     title: "SPORT",
@@ -44,6 +45,6 @@ export const artData: ArtData[] = [
     color: "#EAB6DF",
     picture1: placeholder,
     picture2: placeholder,
-    picture3: placeholder,
+    picture3: undefined,
   },
 ];

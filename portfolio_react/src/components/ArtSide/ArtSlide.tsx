@@ -62,8 +62,8 @@ const ArtSlide: React.FC<ArtDataProps> = ({ project }) => {
 
         <motion.img
           src={project.picture3}
-          initial={{ y: -200, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ y: 200, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false, amount: 0.5 }}
           transition={{ type: "spring", stiffness: 120, damping: 20, duration: 0.8 }}
           style={{
