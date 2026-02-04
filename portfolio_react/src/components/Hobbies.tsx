@@ -2,25 +2,7 @@ import { motion} from "framer-motion";
 import Typewriter from "./Typewriter";
 import background_video from "../assets/img/PortfolioWebsiteHobbies720p.mp4"
 
-const hobbies = [
-  "reading 📚",
-  "travel ✈️",
-  "pole dance 💃",
-  "aerial silks 🤸",
-  "video editing 🎬",
-  "ice skating ⛸️",
-  "roller skating 🛼",
-  "yoga 🧘",
-  "programming 💻",
-  "games 🎮",
-  "swimming 🏊",
-  "jewerly making 💍",
-  "painting 🎨",
-  "DIY & art in general 🛠️",
-  "photography 📸",
-];
-
-const Hobbies: React.FC = () => {
+const EndVideo: React.FC = () => {
 
   return (
     <section
@@ -64,52 +46,11 @@ const Hobbies: React.FC = () => {
           textShadow: "2px 2px 10px rgba(0,0,0,0.8)",
         }}
       >
-        {/* Title */}
-        <h1
-          style={{
-            fontSize: "8vh",
-            fontWeight: "bold",
-            marginBottom: "2vh",
-          }}
-        >
-          <Typewriter text="MY HOBBIES"  />
-        </h1>
 
-        {/* collector text  */}
-        <p
-          style={{
-            fontSize: "2vh",
-            fontStyle: "italic",
-            marginBottom: "4vh",
-            opacity: 0.85,
-          }}
-        >
-          Yes, I am a professional hobby collector
-        </p>
+        <h2 style={{ width: "80vw", maxWidth: "300px", fontSize: "3rem" }}>
+                <Typewriter text={"The End ✨"} ></Typewriter>
+        </h2>
 
-        {/* Hobbies list */}
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "1.5vh",
-            fontSize: "2vh",
-            fontWeight: "500",
-            textAlign: "center",
-          }}
-        >
-          {hobbies.map((hobby, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
-              transition={{ delay: i * 0.15 }}
-            >
-              {hobby}
-            </motion.div>
-          ))}
-        </div>
       </div>
       
 
@@ -117,4 +58,4 @@ const Hobbies: React.FC = () => {
   );
 };
 
-export default Hobbies;
+export default EndVideo;

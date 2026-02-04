@@ -106,7 +106,7 @@ const Education: React.FC = () => {
             AGH University of Kraków
           </div>
 
-          <div style={{ fontSize: "2rem", opacity: 0.85, marginTop: "1rem", fontFamily: "JetBrains Mono, monospace", }}>
+          <div style={{ fontSize: "2rem", fontWeight: 600, color:"#6486b6", opacity: 0.85, marginTop: "1rem", fontFamily: "JetBrains Mono, monospace", }}>
             Applied Computer Science
           </div>
 

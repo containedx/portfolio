@@ -7,7 +7,7 @@ import Education from "./components/Education";
 import Projects from "./components/Projects/Projects";
 import SmallProjects from "./components/Projects/SmallProjects";
 import Hobbies from "./components/Hobbies";
-import Footnote from "./components/Footnote";
+import ArtSide from "./components/ArtSide/ArtSide";
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -36,14 +36,14 @@ const App: React.FC = () => {
       {!loading && (
         <div style={{ position: "relative", zIndex: 2 }}>
           <div style={{ height: "5500px", width: "100vw" }} />
-          <main style={{ height: "17300px", width: "100vw" }}>
+          <main style={{  width: "100vw" }}>
             <AboutMe />
             <Career />
             <Education />
             <Projects />
             <SmallProjects />
+            <ArtSide />
             <Hobbies />
-            <Footnote />
           </main>
         </div>
       )}

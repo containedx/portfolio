@@ -1,7 +1,7 @@
 import Typewriter from "./Typewriter";
 
 const thankyounote : string = 
-"The End ✨ hope you enjoyed! ";
+"The End ✨ ";
 
 
 const Footnote : React.FC = () => {
@@ -12,7 +12,8 @@ const Footnote : React.FC = () => {
                 justifyContent: "center",
                 textAlign: "center",
                 alignItems: "center",
-                marginTop: "40vh"
+                marginTop: "20vh",
+                height: "60vh"
             }}>
             <h2 style={{ width: "80vw", maxWidth: "300px" }}>
                 <Typewriter text={thankyounote} ></Typewriter>
