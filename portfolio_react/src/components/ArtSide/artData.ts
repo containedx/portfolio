@@ -1,8 +1,11 @@
-import placeholder from "../../assets/img/hobby/tiktok.gif";
 import sushi_animation from "../../assets/img/hobby/sushi_gif.gif";
 import jewerly from "../../assets/img/hobby/jewerly.jpg";
 import travel from "../../assets/img/hobby/travel.jpg";
 import game_book from "../../assets/img/hobby/game_book.png";
+import sport from "../../assets/img/hobby/sport.jpg";
+import poledance from "../../assets/img/hobby/poledance.jpg";
+import art1 from "../../assets/img/hobby/art1.gif";
+import art2 from "../../assets/img/hobby/art2.gif";
 
 
 export interface ArtData {
@@ -25,8 +28,8 @@ export const artData: ArtData[] = [
     topic: [  ],
     description: "From video postproduction through animation to photography, I love creating stuff for fun. I use Photoshop, Procreate, Vegas Pro, DaVinciResolve, Blender, Spine. Ocasionally I create custom projects for friends or small comissions, but mainly film-postcards from travel ❤️ Below an animation I made for local sushi restaurant website",
     color: "#874C68",
-    picture1: placeholder,
-    picture2: placeholder,
+    picture1: art1,
+    picture2: art2,
     picture3: sushi_animation,
   },
   {
@@ -41,10 +44,10 @@ export const artData: ArtData[] = [
   {
     title: "SPORT",
     topic: [ ],
-    description: "pole dance 💃, aerial silks 🤸, ice skating ⛸️, roller skating 🛼, yoga 🧘, swimming 🏊",
+    description: "pole dance 💃, aerial silks 🤸, ice skating ⛸️, roller skating 🛼, yoga 🧘, stretching 🤸🏻‍♀️, swimming 🏊 SUP",
     color: "#EAB6DF",
-    picture1: placeholder,
-    picture2: placeholder,
+    picture1: sport,
+    picture2: poledance,
     picture3: undefined,
   },
 ];
