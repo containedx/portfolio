@@ -1,4 +1,4 @@
-import { motion} from "framer-motion";
+
 import Typewriter from "./Typewriter";
 import background_video from "../assets/img/PortfolioWebsiteHobbies720p.mp4"
 

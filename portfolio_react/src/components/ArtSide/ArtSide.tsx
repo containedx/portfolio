@@ -8,7 +8,7 @@ const ArtSide: React.FC = () => {
     <section style={{ position: "relative", height: `${artData.length * 100}vh`}}>
 
         {artData.map((project, i) => (
-          <ArtSlide key={i} project={project} index={i} total={artData.length} />
+          <ArtSlide key={i} project={project} />
         ))}
 
     </section>
